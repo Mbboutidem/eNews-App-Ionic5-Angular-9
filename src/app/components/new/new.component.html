@@ -1,0 +1,43 @@
+<ion-card>
+    <ion-card-header>
+        <ion-card-subtitle>
+                <ion-label>
+                    <div class="new-more">
+                        <ion-button fill="clear" color = "dark" (click)="startMenu()">
+                            <ion-icon name="ellipsis-vertical" slot ="start"></ion-icon>
+                        </ion-button>
+                    </div>
+                    <ion-icon name= "eye" slot="start"></ion-icon>
+                    <i>{{new.source.name}}</i>
+                </ion-label>
+            <!-- <span class="text-primary">{{ index + 1 }}. </span> -->
+         
+<!--             <span class="new-source-name">{{ new.source.name }}</span>
+ -->       
+        </ion-card-subtitle>
+        <ion-card-title (click)="openNewBrower()">
+            {{new.title}}
+        </ion-card-title>
+    </ion-card-header>
+    <ion-img
+        *ngIf="new.urlToImage"
+        class="animated fadeIn fast"
+        [src]="new.urlToImage"
+    ></ion-img>
+    <ion-item>
+        <ion-icon name= "time" slot="start"></ion-icon>
+        <ion-label>{{new.publishedAt | date:'medium'}}</ion-label>
+      </ion-item>
+    <ion-card-content>
+        <p>
+            {{ new.description }}
+        </p>
+    </ion-card-content>
+    <ion-label>
+        <ion-button expand = "full" color = "light-yellow" (click)="openNewBrower()">
+            Visit Website
+        </ion-button>
+        
+    </ion-label>
+    
+</ion-card>

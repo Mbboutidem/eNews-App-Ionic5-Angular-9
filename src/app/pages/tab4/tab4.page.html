@@ -1,0 +1,24 @@
+<ion-header no-border>
+  <ion-toolbar color = "light-yellow">
+    <ion-title>Favourites</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="doRefresh()">
+        <ion-icon name="refresh">//</ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-slides *ngIf="dataStorage.news.length === 0" [options]="sliderOpts">
+    <ion-slide>
+        <ion-label>No Favorites</ion-label>
+    </ion-slide>
+</ion-slides>
+<app-news
+*ngIf="dataStorage.news.length > 0"
+[news]="dataStorage.news"
+[onFavorites]="true"
+></app-news>
+
+</ion-content>
