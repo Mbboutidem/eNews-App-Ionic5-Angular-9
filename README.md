@@ -13,3 +13,17 @@ Keyword or phrase
 2. Source name
 3. Source domain name
 4. Language
+
+# Requirements
+Node 10+
+Npm 6+
+Ionic 5+
+Ionic Lab 1+
+$ brew update && brew upgrade
+$ brew install node
+$ npm install -g npm@latest
+$ npm install -g ionic@rc
+$ npm install -g @ionic/lab@rc semver
+Created with Ionic CLI version 5.0.0 RC:
+
+$ ionic start i4demo blank --type=angular --cordova
